@@ -1,0 +1,422 @@
+/**/
+
+/*Homepage*/
+
+/*Header tag*/
+/*Main Heading*/
+
+.header{
+  width: 100%;
+  background: #004165;     /*Loyal Blue - #004165*/
+  margin: 0;
+  padding: 0;
+  height: 120px; /* h = 100(width of img) + 2*10(padding of img)*/
+  font-family: Times, serif;
+  overflow: hidden;
+  position: relative;
+}
+
+.header_image1{
+  height: 100px;
+  width: 100px;  /*Change height of hd accordingly*/
+  margin: 0;
+  padding-top: 10px; /*Change height of hd accordingly*/
+  padding-bottom: 10px;
+  padding-right: 15px;
+  padding-left: 100px;
+  float: left;
+}
+
+.header_content{
+  font-size: 35px;    /* Try not to change this. If changed many others have to changed*/
+  margin-top: 0px;
+  /* Color : Loyal Blue(#004165)*/
+  background: #004165;
+}
+
+.header_text1{
+  display: inline-block;
+  padding-top: 25px;          /*Change height of hd accordingly*/
+  margin: 0;
+  color: white;
+  text-decoration: none;
+}
+
+.header_text2{
+  font-size: 18px;
+  padding-left: 10px;
+  font-family: Verdana, sans-serif;
+}
+
+.header_text3{
+  display: block;
+  padding-top: 5px;
+  font-size: 16px;
+  font-family: Verdana, sans-serif;
+}
+
+.image2_container{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.header_image2{
+  height: 100px;
+  width: 100px;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 100px;
+  padding-left: 0;
+}
+
+/*end*/
+
+/*News Scrolling*/
+
+.news_scrolling{
+  position: relative;
+  margin: auto;
+  width: 100%;
+  font-family: Verdana, sans-serif;
+}
+
+.news_heading{
+  display: block;
+  position: absolute;
+  font-size: 16px;
+  color:white;
+  background: #003366;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+  padding: 10px 20px;
+  z-index: 1;
+}
+
+.news_area{
+  height: 39px;
+  background: #004d99;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  /*left: 100px*/
+}
+
+.news_content{
+  position: absolute;
+  width: 150%;   /*Will work only if position: absolute*/
+  margin: 0;
+  text-align: left;
+  transform: translateX(100%);
+  animation: moving 30s linear infinite;
+}
+
+@keyframes moving {
+  0%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+
+/*end*/
+
+/*Horizontal Navigation Menu*/
+.nav{
+  font-family: Verdana, sans-serif;
+  background-color: #A9B2B1;
+}
+
+.ul{
+  width: 75%;
+  list-style: none;
+  margin: auto;
+  padding: 0;
+  /*overflow: visible;*/
+  white-space: nowrap;
+}
+
+.ul:after{
+  visibility: hidden;
+  content: " ";
+  display: block;
+  clear: both;
+  height: 0;
+}
+
+.li{
+  /*display: block;*/
+  float: left;
+  margin: 0px;
+  padding: 10px 10px;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  /*transition-duration: 0.5s;*/
+}
+
+.a{
+  /*white-space: nowrap;*/
+  color: black;
+  font-size: 14px;
+  padding: 12px 10px 10px 10px;    /*Adjust padding here relative to padding of li*/
+  text-decoration: none;
+}
+
+/*
+.a:hover{
+  background-color: green;
+  cursor: pointer;
+  color: white;
+  outline: none;
+}
+*/
+
+/*Sub Menu*/
+
+.sub_ul{
+  list-style: none;
+  background-color: #A9B2B1;
+  background: rgba(255,255,255,0);
+  opacity: 0;
+  visibility: hidden;
+  min-width: 100%;
+  padding: 10px 0px;
+  margin-left: 0;
+  position: absolute;
+  text-decoration: none;
+  /*transition: all 0.5s ease;*/
+  display: none;
+  /* Another way to make dropdown disappear*/
+  /*to display again left:0 is used*/
+  /*left: -9999px;*/
+  z-index: 9999;
+}
+
+.sub_li{
+  float: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.sub_a{
+  /*clear: both;*/
+  color: black;
+  font-size: 14px;
+  /*white-space: nowrap;*/
+  text-decoration: none;
+  padding: 10px 10px;
+}
+
+.li:hover .sub_ul{
+  /*left: 0;*/
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+.li:hover .a{
+  background-color: #004d99;
+  color: white;
+  /*visibility: visible;
+  opacity: 1;*/
+}
+
+.li:hover .sub_a{
+
+  background-color: #A9B2B1;
+  display: block;
+  /*visibility: visible;
+  opacity: 1;*/
+}
+
+.li:hover .sub_a:hover{
+  background-color: #004d99;
+  color: white;
+  /*visibility: visible;
+  opacity: 1;
+  display: block;*/
+}
+
+/*end*/
+/*end of Header Tag*/
+
+/*Main Tag*/
+/*News Scrolling*/
+
+/*News Slider*/
+
+.sl{
+  width: 1000px;
+  height: 500px;
+  margin: auto;
+  position: relative;
+  border: 2px solid #004d99;
+  overflow: hidden;
+}
+
+.items{
+  display: none;
+}
+
+.active{
+  display: block;
+}
+
+.align_image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgc{
+  max-width: 1000px;
+  display: block;
+}
+
+.la, .ra{
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 50%;
+  top: 50%;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  margin-top: -25px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.la:hover, .ra:hover{
+  background-color: #004d99;
+  color: white;
+}
+
+.la{
+  left: 20px;
+}
+
+.ra{
+  right: 20px;
+}
+
+.rb{
+  position: absolute;
+  margin-bottom: 20px;
+  left: 50%;
+  bottom: 0;
+  /*Shifts left by 50%*/
+  transform:translate(-50%,0%);
+  -ms-transform:translate(-50%,0%);
+}
+
+.rb1, .rb2, .rb3, .rb4, .rb5, .rb6, .rb7, .rb8, .rb9,
+.rb10, .rb11, .rb12 /*.rb13, .rb14, .rb15, .rb16, .rb17,
+.rb18, .rb19, .rb20, .rb21*/{
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  padding: 0;
+  background-color: transparent;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.rb1:hover, .rb2:hover, .rb3:hover, .rb4:hover,
+.rb5:hover, .rb6:hover, .rb7:hover, .rb8:hover,
+.rb9:hover, .rb10:hover, .rb11:hover, .rb12:hover
+/*.rb13:hover, .rb14:hover, .rb15:hover, .rb16:hover
+.rb17:hover, .rb18:hover, .rb19:hover, .rb20:hover,
+.rb21:hover*/{
+  background-color: #004d99;
+}
+
+.cb{
+  background-color: #004d99;
+}
+
+
+/*end*/
+/*end of Main Tag*/
+
+
+/*Footer tag*/
+
+
+.fd{
+  margin-top: 50px;
+  background-color: brown;
+  width: 100%;
+  height: 250px;
+}
+
+.tc{
+  margin-left: 80px;
+  padding-top: 30px;
+}
+
+.fac{
+  color: white;
+  font-size: 16px;
+  font-family: Verdana, sans-serif;
+  text-decoration: none;
+}
+
+.fdp{
+  width: 30%;
+  margin-left: 80px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.fdpa{
+  color: white;
+  font-size: 16px;
+  font-family: Verdana, sans-serif;
+  text-decoration: none;
+}
+
+/*end of Footer Tag*/
+
+/*end of Homepage*/
+
+/*------------------------------------------------------------------------------------*/
+
+/*ContactUs Page*/
+
+/*end of ContactUs Page*/
+
+/*------------------------------------------------------------------------------------*/
+
+/*WelcomeNote Page*/
+.arrange_data{
+  color: black;
+  font-family: Verdana, sans-serif;
+  font-size: 16px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.arrange_data1{
+  display: inline-block;
+}
+
+.arrange_data2{   /*used in MandatoryDisclosure*/
+  color: blue;
+  text-decoration: none;
+}
+/*end of WelcomeNote Page*/

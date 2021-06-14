@@ -92,7 +92,62 @@
 
     <main>
 
+      <div class="enquiry_container">
+
+        <br>
+        <h2 style="text-align: center; font-size: 1.8306vw">ADMISSION ENQUIRY</h2>     <!--   24px   -->
+        <br>
+        <form action="admission.php" method="POST">
+          <div class="">
+            <label for="name">NAME OF THE STUDENT</label>
+            <input class="enquiry_text" type="text" id="name" name="student_name" placeholder="" pattern=[A-Z\sa-z.]{1,100} required>
+          </div>
+          <br>
+          <div class="">
+            <label for="dob">DATE OF BIRTH</label>
+            <input class="enquiry_text" type="text" id="dob" name="date_of_birth" placeholder="01/01/2000" pattern=[0-9/]{1,15} required>
+          </div>
+          <br>
+          <div class="">
+            <label for="father">NAME OF THE FATHER/GAURDIAN</label>
+            <input class="enquiry_text" type="text" id="father" name="fathers_name" placeholder="" pattern=[A-Z\sa-z.]{1,50} required>
+          </div>
+          <br>
+          <div class="">
+            <label for="class">CLASS IN WHICH ADMISSION IS SOUGHT</label>
+            <input class="enquiry_text" type="text" id="class" name="class" placeholder="" pattern=[A-Z\sa-z\s0-9]{1,15} required>
+          </div>
+          <br>
+          <div class="">
+            <label for="school">NAME OF THE PREVIOUS SCHOOL</label>
+            <input class="enquiry_text" type="text" id="school" name="previous_school" placeholder="" pattern=[A-Z\sa-z\s0-9.,]{1,50} required>
+          </div>
+          <br>
+          <div class="">
+            <label for="address">ADDRESS OF THE PREVIOUS SCHOOL</label>
+            <input class="enquiry_text" type="text" id="address" name="school_address" placeholder="" pattern=[A-Z\sa-z\s0-9\/,.:;()[]{}-_+?]{1,100} required>
+          </div>
+          <br>
+          <div class="">
+            <label for="email">EMAIL ID</label>
+            <input class="enquiry_text" type="email" id="email" name="email_id" placeholder="abc@gmail.com" pattern=[A-Z\sa-z\s0-9@\/,.:;()[]{}-_+?]{1,50} required>
+          </div>
+          <br>
+          <div class="">
+            <label for="contact">CONTACT NUMBER</label>
+            <input class="enquiry_text" type="text" id="contact" name="contact_number" placeholder="" pattern=[0-9]{1,15} required>
+          </div>
+          <br>
+          <br>
+          <button class="button_style" type="submit" name="button">SUBMIT</button>    
+        </form>
+      </div>
+
+
     </main>
+
+    <?php include 'admission.php';?>
+
 
     <footer>
       <div class="fd">
@@ -106,7 +161,7 @@
         </table>
 -->
         <div>
-          <p class="fdp" style="padding-top: 30px"><a class="fdpa" href="#">About Us</a></p>
+          <p class="fdp" style="padding-top: 2.2883vw"><a class="fdpa" href="#">About Us</a></p>
           <p class="fdp"><a class="fdpa" href="#">Social Media</a></p>
           <p class="fdp"><a class="fdpa" href="#">Contact Us</a></p>
           <p class="fdp"><a class="fdpa" href="#">Visit Us</a></p>
